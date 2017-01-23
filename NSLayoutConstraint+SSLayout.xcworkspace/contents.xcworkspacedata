@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:SSLayoutEfficiencyTest/SSLayoutEfficiencyTest.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:NSLayoutConstraint+SSLayoutDemo/NSLayoutConstraint+SSLayoutDemo.xcodeproj">
    </FileRef>
 </Workspace>
