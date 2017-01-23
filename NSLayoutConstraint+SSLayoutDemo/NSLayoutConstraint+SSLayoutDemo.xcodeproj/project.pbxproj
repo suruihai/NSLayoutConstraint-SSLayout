@@ -13,7 +13,19 @@
 		10C00BB71E35F0390051D1FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10C00BB51E35F0390051D1FB /* Main.storyboard */; };
 		10C00BB91E35F0390051D1FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10C00BB81E35F0390051D1FB /* Assets.xcassets */; };
 		10C00BBC1E35F0390051D1FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10C00BBA1E35F0390051D1FB /* LaunchScreen.storyboard */; };
+		10C00BFE1E35F3FD0051D1FB /* NSLayoutConstraint+SSLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C00BFD1E35F3FD0051D1FB /* NSLayoutConstraint+SSLayout.m */; };
+		10C00C061E35F4630051D1FB /* NSLayoutConstraint_SSLayoutDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C00C051E35F4620051D1FB /* NSLayoutConstraint_SSLayoutDemoTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		10C00C081E35F4630051D1FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 10C00BA11E35F0390051D1FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 10C00BA81E35F0390051D1FB;
+			remoteInfo = "NSLayoutConstraint+SSLayoutDemo";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		10C00BA91E35F0390051D1FB /* NSLayoutConstraint+SSLayoutDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NSLayoutConstraint+SSLayoutDemo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,10 +38,23 @@
 		10C00BB81E35F0390051D1FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10C00BBB1E35F0390051D1FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		10C00BBD1E35F0390051D1FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10C00BFC1E35F3FD0051D1FB /* NSLayoutConstraint+SSLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+SSLayout.h"; sourceTree = "<group>"; };
+		10C00BFD1E35F3FD0051D1FB /* NSLayoutConstraint+SSLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+SSLayout.m"; sourceTree = "<group>"; };
+		10C00C031E35F4620051D1FB /* NSLayoutConstraint+SSLayoutDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NSLayoutConstraint+SSLayoutDemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		10C00C051E35F4620051D1FB /* NSLayoutConstraint_SSLayoutDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraint_SSLayoutDemoTests.swift; sourceTree = "<group>"; };
+		10C00C071E35F4630051D1FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10C00C0E1E35F4AD0051D1FB /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		10C00BA61E35F0390051D1FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10C00C001E35F4620051D1FB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,7 +67,9 @@
 		10C00BA01E35F0390051D1FB = {
 			isa = PBXGroup;
 			children = (
+				10C00BFB1E35F3FD0051D1FB /* Source */,
 				10C00BAB1E35F0390051D1FB /* NSLayoutConstraint+SSLayoutDemo */,
+				10C00C041E35F4620051D1FB /* NSLayoutConstraint+SSLayoutDemoTests */,
 				10C00BAA1E35F0390051D1FB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				10C00BA91E35F0390051D1FB /* NSLayoutConstraint+SSLayoutDemo.app */,
+				10C00C031E35F4620051D1FB /* NSLayoutConstraint+SSLayoutDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -79,6 +107,26 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		10C00BFB1E35F3FD0051D1FB /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				10C00BFC1E35F3FD0051D1FB /* NSLayoutConstraint+SSLayout.h */,
+				10C00BFD1E35F3FD0051D1FB /* NSLayoutConstraint+SSLayout.m */,
+			);
+			name = Source;
+			path = ../Source;
+			sourceTree = "<group>";
+		};
+		10C00C041E35F4620051D1FB /* NSLayoutConstraint+SSLayoutDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				10C00C051E35F4620051D1FB /* NSLayoutConstraint_SSLayoutDemoTests.swift */,
+				10C00C071E35F4630051D1FB /* Info.plist */,
+				10C00C0E1E35F4AD0051D1FB /* BridgingHeader.h */,
+			);
+			path = "NSLayoutConstraint+SSLayoutDemoTests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -99,12 +147,31 @@
 			productReference = 10C00BA91E35F0390051D1FB /* NSLayoutConstraint+SSLayoutDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		10C00C021E35F4620051D1FB /* NSLayoutConstraint+SSLayoutDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 10C00C0A1E35F4630051D1FB /* Build configuration list for PBXNativeTarget "NSLayoutConstraint+SSLayoutDemoTests" */;
+			buildPhases = (
+				10C00BFF1E35F4620051D1FB /* Sources */,
+				10C00C001E35F4620051D1FB /* Frameworks */,
+				10C00C011E35F4620051D1FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				10C00C091E35F4630051D1FB /* PBXTargetDependency */,
+			);
+			name = "NSLayoutConstraint+SSLayoutDemoTests";
+			productName = "NSLayoutConstraint+SSLayoutDemoTests";
+			productReference = 10C00C031E35F4620051D1FB /* NSLayoutConstraint+SSLayoutDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		10C00BA11E35F0390051D1FB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = ruihai;
 				TargetAttributes = {
@@ -112,6 +179,12 @@
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = V3R6YJH9SJ;
 						ProvisioningStyle = Automatic;
+					};
+					10C00C021E35F4620051D1FB = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = V3R6YJH9SJ;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 10C00BA81E35F0390051D1FB;
 					};
 				};
 			};
@@ -129,6 +202,7 @@
 			projectRoot = "";
 			targets = (
 				10C00BA81E35F0390051D1FB /* NSLayoutConstraint+SSLayoutDemo */,
+				10C00C021E35F4620051D1FB /* NSLayoutConstraint+SSLayoutDemoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -144,6 +218,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		10C00C011E35F4620051D1FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -154,10 +235,27 @@
 				10C00BB41E35F0390051D1FB /* ViewController.m in Sources */,
 				10C00BB11E35F0390051D1FB /* AppDelegate.m in Sources */,
 				10C00BAE1E35F0390051D1FB /* main.m in Sources */,
+				10C00BFE1E35F3FD0051D1FB /* NSLayoutConstraint+SSLayout.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10C00BFF1E35F4620051D1FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10C00C061E35F4630051D1FB /* NSLayoutConstraint_SSLayoutDemoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		10C00C091E35F4630051D1FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 10C00BA81E35F0390051D1FB /* NSLayoutConstraint+SSLayoutDemo */;
+			targetProxy = 10C00C081E35F4630051D1FB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		10C00BB51E35F0390051D1FB /* Main.storyboard */ = {
@@ -291,6 +389,39 @@
 			};
 			name = Release;
 		};
+		10C00C0B1E35F4630051D1FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = V3R6YJH9SJ;
+				INFOPLIST_FILE = "NSLayoutConstraint+SSLayoutDemoTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ruihai.NSLayoutConstraint-SSLayoutDemoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "NSLayoutConstraint+SSLayoutDemoTests/BridgingHeader.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NSLayoutConstraint+SSLayoutDemo.app/NSLayoutConstraint+SSLayoutDemo";
+			};
+			name = Debug;
+		};
+		10C00C0C1E35F4630051D1FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = V3R6YJH9SJ;
+				INFOPLIST_FILE = "NSLayoutConstraint+SSLayoutDemoTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ruihai.NSLayoutConstraint-SSLayoutDemoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NSLayoutConstraint+SSLayoutDemoTests/BridgingHeader.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NSLayoutConstraint+SSLayoutDemo.app/NSLayoutConstraint+SSLayoutDemo";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -308,6 +439,14 @@
 			buildConfigurations = (
 				10C00BCC1E35F0390051D1FB /* Debug */,
 				10C00BCD1E35F0390051D1FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		10C00C0A1E35F4630051D1FB /* Build configuration list for PBXNativeTarget "NSLayoutConstraint+SSLayoutDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10C00C0B1E35F4630051D1FB /* Debug */,
+				10C00C0C1E35F4630051D1FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
