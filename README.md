@@ -1,10 +1,9 @@
 # NSLayoutConstraint-SSLayout
-####1. simple and easy-to-use, 2files only, 17kB size.
-####2. similar usage as NSLayoutAnchor, but support iOS-8 and "swiftable".
-####3. 1.7 times faster than Masonry, nearly as fast as the system method.
-####4. track all constraints and easy to activate/deactivate any one of them.
-
-##*Example:*
+simple and easy-to-use, 2files only, 17kB size.  
+similar usage as NSLayoutAnchor, but support iOS-8 and "swiftable".  
+1.7 times faster than Masonry, nearly as fast as the system method.  
+track all constraints and easy to activate/deactivate any one of them.
+## Example
 ### Setup constraints
 ```
 [self.redView activateConstraints:^{
