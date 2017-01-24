@@ -5,19 +5,27 @@ A simple way to use NSLayoutConstraint.
 2. 1.7 times faster than Masonry, nearly as fast as the system method.
 3. track all constraints and easy to activate/deactivate them.
 
-Example:
-### setup constraint
+*Example:*
+### Setup constraint
+***
+```
 [self.redView activateConstraints:^{
         self.redView.height_attr.constant = 100;
         self.redView.width_attr = self.blueView.width_attr;
         self.redView.top_attr = self.blueView.top_attr;
         self.redView.leading_attr = self.blueView.trailing_attr;
-    }];
-### alter value of a constraint
+    }];
+```
+### Alter value of a constraint
+***
+```
 self.blueView.width_attr.constant = 100;
-### obtain a constraint
+```
+### Obtain a constraint
+***
+```
 NSLayoutConstraint *cons = [self.titleLabel constraintAccordingToAttribute:self.titleLabel.bottom_attr andAttribute:self.subtitleLabel.top_attr];
-
+```
 ## Adding to your project
 ### Using CocoaPods
 Add pod 'SSBannerViewController' to your Podfile.
