@@ -14,6 +14,7 @@
 		10C00C2C1E3619C00051D1FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10C00C2B1E3619C00051D1FB /* Assets.xcassets */; };
 		10C00C2F1E3619C00051D1FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10C00C2D1E3619C00051D1FB /* LaunchScreen.storyboard */; };
 		10C00C391E3619D30051D1FB /* NSLayoutConstraint+SSLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C00C381E3619D30051D1FB /* NSLayoutConstraint+SSLayout.m */; };
+		C5B12D848B888F6860D2F7A9 /* libPods-SSLayoutEfficiencyTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE0EF3E4A6DD48FC8BACFB3 /* libPods-SSLayoutEfficiencyTest.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,9 @@
 		10C00C301E3619C00051D1FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10C00C371E3619D30051D1FB /* NSLayoutConstraint+SSLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+SSLayout.h"; sourceTree = "<group>"; };
 		10C00C381E3619D30051D1FB /* NSLayoutConstraint+SSLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+SSLayout.m"; sourceTree = "<group>"; };
+		76C86CEE3AFD9FCB829A62F8 /* Pods-SSLayoutEfficiencyTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SSLayoutEfficiencyTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SSLayoutEfficiencyTest/Pods-SSLayoutEfficiencyTest.debug.xcconfig"; sourceTree = "<group>"; };
+		9AE0EF3E4A6DD48FC8BACFB3 /* libPods-SSLayoutEfficiencyTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SSLayoutEfficiencyTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1691B34D95F075CB3D68873 /* Pods-SSLayoutEfficiencyTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SSLayoutEfficiencyTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-SSLayoutEfficiencyTest/Pods-SSLayoutEfficiencyTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5B12D848B888F6860D2F7A9 /* libPods-SSLayoutEfficiencyTest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +53,8 @@
 				10C00C361E3619D30051D1FB /* Source */,
 				10C00C1E1E3619C00051D1FB /* SSLayoutEfficiencyTest */,
 				10C00C1D1E3619C00051D1FB /* Products */,
+				6A8C2C421DE6B4F3EF6AA2BE /* Pods */,
+				5DD8D96FA3254487030C4E17 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -93,6 +100,23 @@
 			path = ../Source;
 			sourceTree = "<group>";
 		};
+		5DD8D96FA3254487030C4E17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9AE0EF3E4A6DD48FC8BACFB3 /* libPods-SSLayoutEfficiencyTest.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6A8C2C421DE6B4F3EF6AA2BE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				76C86CEE3AFD9FCB829A62F8 /* Pods-SSLayoutEfficiencyTest.debug.xcconfig */,
+				A1691B34D95F075CB3D68873 /* Pods-SSLayoutEfficiencyTest.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -100,9 +124,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 10C00C331E3619C00051D1FB /* Build configuration list for PBXNativeTarget "SSLayoutEfficiencyTest" */;
 			buildPhases = (
+				7B671D479C538F5D231AD0EE /* [CP] Check Pods Manifest.lock */,
 				10C00C181E3619C00051D1FB /* Sources */,
 				10C00C191E3619C00051D1FB /* Frameworks */,
 				10C00C1A1E3619C00051D1FB /* Resources */,
+				E3115C16FB5ADD7ECD228058 /* [CP] Embed Pods Frameworks */,
+				6B89174594981937047AB77D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -159,6 +186,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6B89174594981937047AB77D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SSLayoutEfficiencyTest/Pods-SSLayoutEfficiencyTest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7B671D479C538F5D231AD0EE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E3115C16FB5ADD7ECD228058 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SSLayoutEfficiencyTest/Pods-SSLayoutEfficiencyTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		10C00C181E3619C00051D1FB /* Sources */ = {
@@ -284,10 +359,12 @@
 		};
 		10C00C341E3619C00051D1FB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76C86CEE3AFD9FCB829A62F8 /* Pods-SSLayoutEfficiencyTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = V3R6YJH9SJ;
 				INFOPLIST_FILE = SSLayoutEfficiencyTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ruihai.SSLayoutEfficiencyTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -296,10 +373,12 @@
 		};
 		10C00C351E3619C00051D1FB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1691B34D95F075CB3D68873 /* Pods-SSLayoutEfficiencyTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = V3R6YJH9SJ;
 				INFOPLIST_FILE = SSLayoutEfficiencyTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ruihai.SSLayoutEfficiencyTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -325,6 +404,7 @@
 				10C00C351E3619C00051D1FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
