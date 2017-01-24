@@ -5,9 +5,8 @@ A simple way to use NSLayoutConstraint.
 2. 1.7 times faster than Masonry, nearly as fast as the system method.
 3. track all constraints and easy to activate/deactivate them.
 
-*Example:*
+##*Example:*
 ### Setup constraint
-***
 ```
 [self.redView activateConstraints:^{
         self.redView.height_attr.constant = 100;
@@ -17,12 +16,10 @@ A simple way to use NSLayoutConstraint.
     }];
 ```
 ### Alter value of a constraint
-***
 ```
 self.blueView.width_attr.constant = 100;
 ```
 ### Obtain a constraint
-***
 ```
 NSLayoutConstraint *cons = [self.titleLabel constraintAccordingToAttribute:self.titleLabel.bottom_attr andAttribute:self.subtitleLabel.top_attr];
 ```
