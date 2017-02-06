@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "NSLayoutConstraint-SSLayout"
-  s.version      = "1.0"
+  s.version      = "1.1"
   s.summary      = "easy-to-use NSLayoutConstraint"
 
   # This description is used to generate tags and improve search results.
@@ -97,7 +97,7 @@ This project uses MIT License.
   #
 
   # s.platform     = :ios
-  # s.platform     = :ios, "5.0"
+  s.platform     = :ios, "8.0"
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
@@ -149,8 +149,8 @@ This project uses MIT License.
   #  the lib prefix of their name.
   #
 
-  # s.framework  = "SomeFramework"
-  # s.frameworks = "SomeFramework", "AnotherFramework"
+  s.framework  = "UIKit"
+  # s.frameworks = "UIKit", "AVFoundation"
 
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
