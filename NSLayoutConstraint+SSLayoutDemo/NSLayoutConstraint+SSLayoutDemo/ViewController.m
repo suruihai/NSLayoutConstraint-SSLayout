@@ -45,7 +45,6 @@
         self.redView.top_attr = self.blueView.top_attr;
         self.redView.leading_attr = self.blueView.trailing_attr;
     }];
-    
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {

@@ -38,47 +38,59 @@
 }
 
 - (NSLayoutConstraint *)lesserThan:(SSLayoutAttribute *)attr {
-    return [self constraintTo:attr constant:0 priority:UILayoutPriorityRequired relation:NSLayoutRelationLessThanOrEqual];
+    return [self constraintTo:attr constant:0 priority:UILayoutPriorityRequired relation:NSLayoutRelationLessThanOrEqual multiplier:1.0];
 }
 
 - (NSLayoutConstraint *)lesserThan:(SSLayoutAttribute *)attr constant:(CGFloat)constant {
-    return [self constraintTo:attr constant:constant priority:UILayoutPriorityRequired relation:NSLayoutRelationLessThanOrEqual];
+    return [self constraintTo:attr constant:constant priority:UILayoutPriorityRequired relation:NSLayoutRelationLessThanOrEqual multiplier:1.0];
 }
 
 - (NSLayoutConstraint *)lesserThan:(SSLayoutAttribute *)attr constant:(CGFloat)constant priority:(UILayoutPriority)priority {
-    return [self constraintTo:attr constant:constant priority:priority relation:NSLayoutRelationLessThanOrEqual];
+    return [self constraintTo:attr constant:constant priority:priority relation:NSLayoutRelationLessThanOrEqual multiplier:1.0];
+}
+
+- (NSLayoutConstraint *)lesserThan:(SSLayoutAttribute *)attr constant:(CGFloat)constant multiplier:(CGFloat)multiplier priority:(UILayoutPriority)priority {
+    return [self constraintTo:attr constant:constant priority:priority relation:NSLayoutRelationLessThanOrEqual multiplier:multiplier];
 }
 
 - (NSLayoutConstraint *)greaterThan:(SSLayoutAttribute *)attr {
-    return [self constraintTo:attr constant:0 priority:UILayoutPriorityRequired relation:NSLayoutRelationGreaterThanOrEqual];
+    return [self constraintTo:attr constant:0 priority:UILayoutPriorityRequired relation:NSLayoutRelationGreaterThanOrEqual multiplier:1.0];
 }
 
 - (NSLayoutConstraint *)greaterThan:(SSLayoutAttribute *)attr constant:(CGFloat)constant {
-    return [self constraintTo:attr constant:constant priority:UILayoutPriorityRequired relation:NSLayoutRelationGreaterThanOrEqual];
+    return [self constraintTo:attr constant:constant priority:UILayoutPriorityRequired relation:NSLayoutRelationGreaterThanOrEqual multiplier:1.0];
 }
 
 - (NSLayoutConstraint *)greaterThan:(SSLayoutAttribute *)attr constant:(CGFloat)constant priority:(UILayoutPriority)priority {
-    return [self constraintTo:attr constant:constant priority:priority relation:NSLayoutRelationGreaterThanOrEqual];
+    return [self constraintTo:attr constant:constant priority:priority relation:NSLayoutRelationGreaterThanOrEqual multiplier:1.0];
+}
+
+- (NSLayoutConstraint *)greaterThan:(SSLayoutAttribute *)attr constant:(CGFloat)constant multiplier:(CGFloat)multiplier priority:(UILayoutPriority)priority {
+    return [self constraintTo:attr constant:constant priority:priority relation:NSLayoutRelationGreaterThanOrEqual multiplier:multiplier];
 }
 
 - (NSLayoutConstraint *)equalTo:(SSLayoutAttribute *)attr {
-    return [self constraintTo:attr constant:0 priority:UILayoutPriorityRequired relation:NSLayoutRelationEqual];
+    return [self constraintTo:attr constant:0 priority:UILayoutPriorityRequired relation:NSLayoutRelationEqual multiplier:1.0];
 }
 
 - (NSLayoutConstraint *)equalTo:(SSLayoutAttribute *)attr constant:(CGFloat)constant {
-    return [self constraintTo:attr constant:constant priority:UILayoutPriorityRequired relation:NSLayoutRelationEqual];
+    return [self constraintTo:attr constant:constant priority:UILayoutPriorityRequired relation:NSLayoutRelationEqual multiplier:1.0];
 }
 
 - (NSLayoutConstraint *)equalTo:(SSLayoutAttribute *)attr constant:(CGFloat)constant priority:(UILayoutPriority)priority {
-    return [self constraintTo:attr constant:constant priority:priority relation:NSLayoutRelationEqual];
+    return [self constraintTo:attr constant:constant priority:priority relation:NSLayoutRelationEqual multiplier:1.0];
+}
+
+- (NSLayoutConstraint *)equalTo:(SSLayoutAttribute *)attr constant:(CGFloat)constant multiplier:(CGFloat)multiplier priority:(UILayoutPriority)priority {
+    return [self constraintTo:attr constant:constant priority:priority relation:NSLayoutRelationEqual multiplier:multiplier];
 }
 
 /**
  *  THE VERY BASE METHOD!
  */
-- (NSLayoutConstraint *)constraintTo:(SSLayoutAttribute *)attr constant:(CGFloat)constant priority:(UILayoutPriority)priority relation:(NSLayoutRelation)relation {
+- (NSLayoutConstraint *)constraintTo:(SSLayoutAttribute *)attr constant:(CGFloat)constant priority:(UILayoutPriority)priority relation:(NSLayoutRelation)relation multiplier:(CGFloat)multiplier {
     if (attr) {
-        return [NSLayoutConstraint constraintWithItem:self.view attribute:self.attribute relatedBy:relation toItem:attr.view attribute:attr.attribute multiplier:1.0 constant:constant ss_priority:priority];
+        return [NSLayoutConstraint constraintWithItem:self.view attribute:self.attribute relatedBy:relation toItem:attr.view attribute:attr.attribute multiplier:multiplier constant:constant ss_priority:priority];
     } else {
         return [NSLayoutConstraint constraintWithItem:self.view attribute:self.attribute relatedBy:relation toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:constant ss_priority:priority];
     }

@@ -28,6 +28,7 @@
 - (NSLayoutConstraint *)lesserThan:(SSLayoutAttribute *)attr;
 - (NSLayoutConstraint *)lesserThan:(SSLayoutAttribute *)attr constant:(CGFloat)constant;
 - (NSLayoutConstraint *)lesserThan:(SSLayoutAttribute *)attr constant:(CGFloat)constant priority:(UILayoutPriority)priority;
+- (NSLayoutConstraint *)lesserThan:(SSLayoutAttribute *)attr constant:(CGFloat)constant multiplier:(CGFloat)multiplier priority:(UILayoutPriority)priority;
 
 /**
  *  example: [self.view.top_attr greaterThan:[[UIApplication sharedApplication].delegate window].top_attr]
@@ -35,6 +36,7 @@
 - (NSLayoutConstraint *)greaterThan:(SSLayoutAttribute *)attr;
 - (NSLayoutConstraint *)greaterThan:(SSLayoutAttribute *)attr constant:(CGFloat)constant;
 - (NSLayoutConstraint *)greaterThan:(SSLayoutAttribute *)attr constant:(CGFloat)constant priority:(UILayoutPriority)priority;
+- (NSLayoutConstraint *)greaterThan:(SSLayoutAttribute *)attr constant:(CGFloat)constant multiplier:(CGFloat)multiplier priority:(UILayoutPriority)priority;
 
 /**
  *  example: [self.view.top_attr equalTo:[[UIApplication sharedApplication].delegate window].top_attr]
@@ -42,6 +44,7 @@
 - (NSLayoutConstraint *)equalTo:(SSLayoutAttribute *)attr;
 - (NSLayoutConstraint *)equalTo:(SSLayoutAttribute *)attr constant:(CGFloat)constant;
 - (NSLayoutConstraint *)equalTo:(SSLayoutAttribute *)attr constant:(CGFloat)constant priority:(UILayoutPriority)priority;
+- (NSLayoutConstraint *)equalTo:(SSLayoutAttribute *)attr constant:(CGFloat)constant multiplier:(CGFloat)multiplier priority:(UILayoutPriority)priority;
 @end
 
 /**
