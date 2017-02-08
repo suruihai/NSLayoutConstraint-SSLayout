@@ -92,7 +92,7 @@
     if (attr) {
         return [NSLayoutConstraint constraintWithItem:self.view attribute:self.attribute relatedBy:relation toItem:attr.view attribute:attr.attribute multiplier:multiplier constant:constant ss_priority:priority];
     } else {
-        return [NSLayoutConstraint constraintWithItem:self.view attribute:self.attribute relatedBy:relation toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:constant ss_priority:priority];
+        return [NSLayoutConstraint constraintWithItem:self.view attribute:self.attribute relatedBy:relation toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:multiplier constant:constant ss_priority:priority];
     }
 }
 @end
