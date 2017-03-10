@@ -168,6 +168,7 @@
     NSArray *array = [self allConstraints];
     if (array.count > 0) {
         [NSLayoutConstraint deactivateConstraints:array];
+        [self.allConstraints removeAllObjects];
         //        NSLog(@"\n---All Constraints Deactivated!---\n%@", array);
     }
 }
@@ -184,6 +185,9 @@
     NSLayoutConstraint *cons = [self constraintAccordingToAttribute:attribute andAttribute:otherAttribute relation:relation];
     if (cons) {
         [NSLayoutConstraint deactivateConstraints:@[cons]];
+        if (cons) {
+            [self.allConstraints removeObject:cons];
+        }
     }
 }
 
