@@ -240,37 +240,17 @@ class NSLayoutConstraint_SSLayoutDemoTests: XCTestCase {
             self.view1.top_attr = self.window.top_attr
             self.view1.left_attr = self.window.left_attr
         }
-        
-        let constraint = view1.constraint(accordingTo: view1.top_attr, andAttribute: window.top_attr, relation: NSLayoutRelation.equal)
-        view1.deactivateConstraint(accordingTo: view1.top_attr, andAttribute: window.top_attr, relation: NSLayoutRelation.equal)
+        // 现在 deactivate 后约束对象就被销毁了， active = NO 不销毁
+        var constraint = view1.constraint(accordingTo: view1.top_attr, andAttribute: window.top_attr, relation: NSLayoutRelation.equal)
+        constraint?.isActive = false
+        XCTAssertTrue((constraint != nil))
         XCTAssertFalse((constraint?.isActive)!)
-        view1.activateConstraint(accordingTo: view1.top_attr, andAttribute: window.top_attr, relation: NSLayoutRelation.equal)
+        constraint?.isActive = true
         XCTAssertTrue((constraint?.isActive)!)
         
-        view1.deactivateConstraint(accordingTo: view1.top_attr, andAttribute: window.top_attr, relation: NSLayoutRelation.greaterThanOrEqual)
-        XCTAssertTrue((constraint?.isActive)!)
-        view1.activateConstraint(accordingTo: view1.top_attr, andAttribute: window.top_attr, relation: NSLayoutRelation.lessThanOrEqual)
-        XCTAssertTrue((constraint?.isActive)!)
-        
-        view1.deactivateConstraint(accordingTo: view1.top_attr, andAttribute: window.centerX_attr, relation: NSLayoutRelation.equal)
-        XCTAssertTrue((constraint?.isActive)!)
-        view1.activateConstraint(accordingTo: view1.top_attr, andAttribute: window.centerX_attr, relation: NSLayoutRelation.equal)
-        XCTAssertTrue((constraint?.isActive)!)
-        
-        view1.deactivateConstraint(accordingTo: view1.centerX_attr, andAttribute: window.top_attr, relation: NSLayoutRelation.equal)
-        XCTAssertTrue((constraint?.isActive)!)
-        view1.activateConstraint(accordingTo: view1.centerX_attr, andAttribute: window.top_attr, relation: NSLayoutRelation.equal)
-        XCTAssertTrue((constraint?.isActive)!)
-        
-        view1.deactivateConstraint(accordingTo: view1.top_attr, andAttribute: nil, relation: NSLayoutRelation.equal)
-        XCTAssertTrue((constraint?.isActive)!)
-        view1.activateConstraint(accordingTo: view1.top_attr, andAttribute: nil, relation: NSLayoutRelation.equal)
-        XCTAssertTrue((constraint?.isActive)!)
-        
-        view1.deactivateConstraint(accordingTo: nil, andAttribute: window.top_attr, relation: NSLayoutRelation.equal)
-        XCTAssertTrue((constraint?.isActive)!)
-        view1.activateConstraint(accordingTo: nil, andAttribute: window.top_attr, relation: NSLayoutRelation.equal)
-        XCTAssertTrue((constraint?.isActive)!)
+        view1.deactivateConstraint(accordingTo: view1.top_attr, andAttribute: window.top_attr)
+        constraint = view1.constraint(accordingTo: view1.top_attr, andAttribute: window.top_attr, relation: NSLayoutRelation.equal)
+        XCTAssertFalse((constraint != nil))
     }
     
     func testGetConstraint() {
