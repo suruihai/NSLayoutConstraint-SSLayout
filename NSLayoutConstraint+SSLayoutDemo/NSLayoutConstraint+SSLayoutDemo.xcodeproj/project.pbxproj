@@ -371,6 +371,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = V3R6YJH9SJ;
 				INFOPLIST_FILE = "NSLayoutConstraint+SSLayoutDemo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ruihai.NSLayoutConstraint-SSLayoutDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -383,6 +384,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = V3R6YJH9SJ;
 				INFOPLIST_FILE = "NSLayoutConstraint+SSLayoutDemo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ruihai.NSLayoutConstraint-SSLayoutDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -441,6 +443,7 @@
 				10C00BCD1E35F0390051D1FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		10C00C0A1E35F4630051D1FB /* Build configuration list for PBXNativeTarget "NSLayoutConstraint+SSLayoutDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -449,6 +452,7 @@
 				10C00C0C1E35F4630051D1FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

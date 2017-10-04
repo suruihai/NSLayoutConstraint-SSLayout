@@ -284,6 +284,70 @@
     return SSLayoutAttributeMake(self, NSLayoutAttributeFirstBaseline);
 }
 
+- (SSLayoutAttribute *)left_attr_safe {
+    if (@available(iOS 11.0, *)) {
+        return SSLayoutAttributeMake(self.safeAreaLayoutGuide, NSLayoutAttributeLeft);
+    } else {
+        return self.left_attr;
+    }
+}
+
+- (SSLayoutAttribute *)right_attr_safe {
+    if (@available(iOS 11.0, *)) {
+        return SSLayoutAttributeMake(self.safeAreaLayoutGuide, NSLayoutAttributeRight);
+    } else {
+        return self.right_attr;
+    }
+}
+
+- (SSLayoutAttribute *)top_attr_safe {
+    if (@available(iOS 11.0, *)) {
+        return SSLayoutAttributeMake(self.safeAreaLayoutGuide, NSLayoutAttributeTop);
+    } else {
+        return self.top_attr;
+    }
+}
+
+- (SSLayoutAttribute *)bottom_attr_safe {
+    if (@available(iOS 11.0, *)) {
+        return SSLayoutAttributeMake(self.safeAreaLayoutGuide, NSLayoutAttributeBottom);
+    } else {
+        return self.bottom_attr;
+    }
+}
+
+- (SSLayoutAttribute *)leading_attr_safe {
+    if (@available(iOS 11.0, *)) {
+        return SSLayoutAttributeMake(self.safeAreaLayoutGuide, NSLayoutAttributeLeading);
+    } else {
+        return self.leading_attr;
+    }
+}
+
+- (SSLayoutAttribute *)trailing_attr_safe {
+    if (@available(iOS 11.0, *)) {
+        return SSLayoutAttributeMake(self.safeAreaLayoutGuide, NSLayoutAttributeTrailing);
+    } else {
+        return self.trailing_attr;
+    }
+}
+
+- (SSLayoutAttribute *)centerX_attr_safe {
+    if (@available(iOS 11.0, *)) {
+        return SSLayoutAttributeMake(self.safeAreaLayoutGuide, NSLayoutAttributeCenterX);
+    } else {
+        return self.centerX_attr;
+    }
+}
+
+- (SSLayoutAttribute *)centerY_attr_safe {
+    if (@available(iOS 11.0, *)) {
+        return SSLayoutAttributeMake(self.safeAreaLayoutGuide, NSLayoutAttributeCenterY);
+    } else {
+        return self.centerY_attr;
+    }
+}
+
 #pragma mark - SSLayoutAttribute Setters
 
 - (void)setLeft_attr:(SSLayoutAttribute *)left_attr {

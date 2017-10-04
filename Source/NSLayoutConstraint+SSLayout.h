@@ -50,7 +50,7 @@
 /**
  * SSLayoutAttribute construction function
  */
-static inline SSLayoutAttribute *SSLayoutAttributeMake(UIView *view, NSLayoutAttribute attribute) {
+static inline SSLayoutAttribute *SSLayoutAttributeMake(id view, NSLayoutAttribute attribute) {
     SSLayoutAttribute *attr = [[SSLayoutAttribute alloc] init];
     attr.view = view;
     attr.attribute = attribute;
@@ -79,6 +79,17 @@ static inline SSLayoutAttribute *SSLayoutAttributeMake(UIView *view, NSLayoutAtt
 @property (strong, nonatomic) SSLayoutAttribute *centerY_attr;
 @property (strong, nonatomic) SSLayoutAttribute *lastBaseline_attr;
 @property (strong, nonatomic) SSLayoutAttribute *firstBaseLine_attr;
+
+// used while making constraint to a reference object, aka safeAreaLayoutGuide, only applicable for iOS11 or newer.
+// only getter is implemented, because setting a layoutguide's constraint has no point.
+@property (strong, nonatomic) SSLayoutAttribute *left_attr_safe;
+@property (strong, nonatomic) SSLayoutAttribute *right_attr_safe;
+@property (strong, nonatomic) SSLayoutAttribute *top_attr_safe;
+@property (strong, nonatomic) SSLayoutAttribute *bottom_attr_safe;
+@property (strong, nonatomic) SSLayoutAttribute *leading_attr_safe;
+@property (strong, nonatomic) SSLayoutAttribute *trailing_attr_safe;
+@property (strong, nonatomic) SSLayoutAttribute *centerX_attr_safe;
+@property (strong, nonatomic) SSLayoutAttribute *centerY_attr_safe;
 
 /**
  *  activate all constraints written in the block parameter, also store them in a mutablearray for further use. Constraints should be relative to its view, which is the caller of this method
