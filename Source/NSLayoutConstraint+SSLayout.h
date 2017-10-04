@@ -94,6 +94,7 @@ static inline SSLayoutAttribute *SSLayoutAttributeMake(UIView *view, NSLayoutAtt
 - (void)activateConstraintAccordingToAttribute:(SSLayoutAttribute *)attribute andAttribute:(SSLayoutAttribute *)otherAttribute relation:(NSLayoutRelation)relation;
 
 - (void)deactivateAllConstraints;
+- (void)deactivateAllConstraintsAndAssociatedObjects;
 /**
  *  deactivate specific constraint, will destroy the constraint object. If only temporary deactivate, use constraintAccordingToAttribute:andAttribute: to get the constraint object and set its active = NO
  */

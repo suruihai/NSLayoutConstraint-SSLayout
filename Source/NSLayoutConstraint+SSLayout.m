@@ -173,6 +173,11 @@
     }
 }
 
+- (void)deactivateAllConstraintsAndAssociatedObjects {
+    [self deactivateAllConstraints];
+    objc_removeAssociatedObjects(self);
+}
+
 - (void)deactivateConstraintAccordingToAttribute:(SSLayoutAttribute *)attribute {
     [self deactivateConstraintAccordingToAttribute:attribute andAttribute:nil relation:NSLayoutRelationEqual];
 }
