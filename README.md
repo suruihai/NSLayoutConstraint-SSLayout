@@ -7,14 +7,14 @@
 6. compatible to iOS 11, extremely easy to layout refering to safeAreaLayoutGuide.
 ## Example
 ### Setup constraints
-Notice: This method will bound all the constraints written in the block to its responsible caller.
+**Notice**: This method will bound all the constraints written in the block to its responsible caller.
 ```
 [self.redView activateConstraints:^{
-        self.redView.height_attr.constant = 100;
-        self.redView.width_attr = self.blueView.width_attr;
-        self.redView.top_attr = self.blueView.top_attr;
-        self.redView.leading_attr = self.blueView.trailing_attr;
-    }];
+    self.redView.height_attr.constant = 100;
+    self.redView.width_attr = self.blueView.width_attr;
+    self.redView.top_attr = self.blueView.top_attr;
+    self.redView.leading_attr = self.blueView.trailing_attr;
+}];
 ```
 or like this
 ```
@@ -28,11 +28,11 @@ NSMutableArray *arrayM = [NSMutableArray arrayWithCapacity:4];
 ### Setup constraints to safeAreaLayoutGuide
 ```
 [self.redView activateConstraints:^{
-self.redView.height_attr.constant = 100;
-       self.redView.width_attr.constant = 100;
-              self.redView.top_attr = self.view.top_attr_safe;
-                     self.redView.leading_attr = self.view.leading_attr_safe;
-                        }];
+    self.redView.height_attr.constant = 100;
+    self.redView.width_attr.constant = 100;
+    self.redView.top_attr = self.view.top_attr_safe;
+    self.redView.leading_attr = self.view.leading_attr_safe;
+}];
 ```
 ### Alter value of a constraint
 ```
@@ -52,7 +52,7 @@ NSLayoutConstraint *cons = [self.titleLabel constraintAccordingToAttribute:self.
 [self.redView activateConstraintAccordingToAttribute:self.redView.height_attr];
 [self.redView deactivateConstraintAccordingToAttribute:self.redView.height_attr];
 ```
-Notice: deactivateConstraintAccordingToAttribute will deactivate and remove the constraint object, if you desire to temporary deactivate a constraint, you should obtain it and call setActive:NO.
+**Notice**: deactivateConstraintAccordingToAttribute will deactivate and remove the constraint object, if you desire to temporary deactivate a constraint, you should obtain it and call setActive:NO.
 
 ## Adding to your project
 ### Using CocoaPods
