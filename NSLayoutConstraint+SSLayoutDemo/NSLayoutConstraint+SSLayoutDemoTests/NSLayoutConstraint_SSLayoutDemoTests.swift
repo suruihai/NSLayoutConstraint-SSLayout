@@ -55,62 +55,62 @@ class NSLayoutConstraint_SSLayoutDemoTests: XCTestCase {
     }
     
     func testLesserThan() {
-        var constraint = view1.height_attr.lesserThan(nil, constant: 50, priority: UILayoutPriorityDefaultHigh)
+        var constraint = view1.height_attr.lesserThan(nil, constant: 50, priority: UILayoutPriority.defaultHigh)
         XCTAssertNotNil(constraint)
         XCTAssertEqual(constraint?.constant, 50)
         XCTAssertTrue((constraint?.firstItem)! as! NSObject == view1)
         XCTAssertTrue(constraint?.firstAttribute == NSLayoutAttribute.height)
-        XCTAssertTrue(constraint?.priority == UILayoutPriorityDefaultHigh)
+        XCTAssertTrue(constraint?.priority == UILayoutPriority.defaultHigh)
         XCTAssertTrue(constraint?.relation == NSLayoutRelation.lessThanOrEqual)
         
-        constraint = view1.top_attr.lesserThan(view2.top_attr, constant: 0, priority: UILayoutPriorityDefaultLow)
+        constraint = view1.top_attr.lesserThan(view2.top_attr, constant: 0, priority: UILayoutPriority.defaultLow)
         XCTAssertNotNil(constraint)
         XCTAssertEqual(constraint?.constant, 0)
         XCTAssertTrue((constraint?.firstItem)! as! NSObject == view1)
         XCTAssertTrue((constraint?.secondItem)! as! NSObject == view2)
         XCTAssertTrue(constraint?.firstAttribute == NSLayoutAttribute.top)
         XCTAssertTrue(constraint?.secondAttribute == NSLayoutAttribute.top)
-        XCTAssertTrue(constraint?.priority == UILayoutPriorityDefaultLow)
+        XCTAssertTrue(constraint?.priority == UILayoutPriority.defaultLow)
         XCTAssertTrue(constraint?.relation == NSLayoutRelation.lessThanOrEqual)
     }
     
     func testGreaterThan() {
-        var constraint = view1.height_attr.greaterThan(nil, constant: 50, priority: UILayoutPriorityDefaultHigh)
+        var constraint = view1.height_attr.greaterThan(nil, constant: 50, priority: UILayoutPriority.defaultHigh)
         XCTAssertNotNil(constraint)
         XCTAssertEqual(constraint?.constant, 50)
         XCTAssertTrue((constraint?.firstItem)! as! NSObject == view1)
         XCTAssertTrue(constraint?.firstAttribute == NSLayoutAttribute.height)
-        XCTAssertTrue(constraint?.priority == UILayoutPriorityDefaultHigh)
+        XCTAssertTrue(constraint?.priority == UILayoutPriority.defaultHigh)
         XCTAssertTrue(constraint?.relation == NSLayoutRelation.greaterThanOrEqual)
         
-        constraint = view1.top_attr.greaterThan(view2.top_attr, constant: 0, priority: UILayoutPriorityDefaultLow)
+        constraint = view1.top_attr.greaterThan(view2.top_attr, constant: 0, priority: UILayoutPriority.defaultLow)
         XCTAssertNotNil(constraint)
         XCTAssertEqual(constraint?.constant, 0)
         XCTAssertTrue((constraint?.firstItem)! as! NSObject == view1)
         XCTAssertTrue((constraint?.secondItem)! as! NSObject == view2)
         XCTAssertTrue(constraint?.firstAttribute == NSLayoutAttribute.top)
         XCTAssertTrue(constraint?.secondAttribute == NSLayoutAttribute.top)
-        XCTAssertTrue(constraint?.priority == UILayoutPriorityDefaultLow)
+        XCTAssertTrue(constraint?.priority == UILayoutPriority.defaultLow)
         XCTAssertTrue(constraint?.relation == NSLayoutRelation.greaterThanOrEqual)
     }
     
     func testEqualTo() {
-        var constraint = view1.height_attr.equal(to: nil, constant: 50, priority: UILayoutPriorityDefaultHigh)
+        var constraint = view1.height_attr.equal(to: nil, constant: 50, priority: UILayoutPriority.defaultHigh)
         XCTAssertNotNil(constraint)
         XCTAssertEqual(constraint?.constant, 50)
         XCTAssertTrue((constraint?.firstItem)! as! NSObject == view1)
         XCTAssertTrue(constraint?.firstAttribute == NSLayoutAttribute.height)
-        XCTAssertTrue(constraint?.priority == UILayoutPriorityDefaultHigh)
+        XCTAssertTrue(constraint?.priority == UILayoutPriority.defaultHigh)
         XCTAssertTrue(constraint?.relation == NSLayoutRelation.equal)
         
-        constraint = view1.top_attr.equal(to: view2.top_attr, constant: 0, priority: UILayoutPriorityDefaultLow)
+        constraint = view1.top_attr.equal(to: view2.top_attr, constant: 0, priority: UILayoutPriority.defaultLow)
         XCTAssertNotNil(constraint)
         XCTAssertEqual(constraint?.constant, 0)
         XCTAssertTrue((constraint?.firstItem)! as! NSObject == view1)
         XCTAssertTrue((constraint?.secondItem)! as! NSObject == view2)
         XCTAssertTrue(constraint?.firstAttribute == NSLayoutAttribute.top)
         XCTAssertTrue(constraint?.secondAttribute == NSLayoutAttribute.top)
-        XCTAssertTrue(constraint?.priority == UILayoutPriorityDefaultLow)
+        XCTAssertTrue(constraint?.priority == UILayoutPriority.defaultLow)
         XCTAssertTrue(constraint?.relation == NSLayoutRelation.equal)
     }
     
@@ -171,9 +171,9 @@ class NSLayoutConstraint_SSLayoutDemoTests: XCTestCase {
     }
     
     func testNSLayoutConstraintExtensionMethod() {
-        let constraint = NSLayoutConstraint(item: view1, attribute: NSLayoutAttribute.centerX, relatedBy: NSLayoutRelation.equal, toItem: view2, attribute: NSLayoutAttribute.centerX, multiplier: 1.0, constant: 5, ss_priority: UILayoutPriorityDefaultLow)
+        let constraint = NSLayoutConstraint(item: view1, attribute: NSLayoutAttribute.centerX, relatedBy: NSLayoutRelation.equal, toItem: view2, attribute: NSLayoutAttribute.centerX, multiplier: 1.0, constant: 5, ss_priority: UILayoutPriority.defaultLow)
         XCTAssertNotNil(constraint)
-        XCTAssert(constraint?.priority == UILayoutPriorityDefaultLow, "priority should be UILayoutPriorityDefaultLow!")
+        XCTAssert(constraint?.priority == UILayoutPriority.defaultLow, "priority should be UILayoutPriorityDefaultLow!")
     }
     
     func testDeActivateAndActivateAll() {
