@@ -61,5 +61,5 @@ Add pod 'NSLayoutConstraint-SSLayout' to your Podfile.
 ### Including Source Directly Into Your Project
 Add the files under "Source" folder to your project.
 
-# Licence
+# License
 This project uses MIT License.
