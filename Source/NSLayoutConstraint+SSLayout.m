@@ -120,7 +120,7 @@
 #pragma clang diagnostic pop
 
 #pragma mark - Activate Methods
-- (void)activateConstraints:(void (^)())constraints {
+- (void)activateConstraints:(void (^)(void))constraints {
     
     if (constraints) {
         

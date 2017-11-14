@@ -94,7 +94,7 @@ static inline SSLayoutAttribute *SSLayoutAttributeMake(id view, NSLayoutAttribut
 /**
  *  activate all constraints written in the block parameter, also store them in a mutablearray for further use. Constraints should be relative to its view, which is the caller of this method
  */
-- (void)activateConstraints:(void (^)())constraints;
+- (void)activateConstraints:(void (^)(void))constraints;
 
 - (void)activateAllConstraints;
 /**
